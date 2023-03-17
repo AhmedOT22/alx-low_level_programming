@@ -2,18 +2,17 @@
 #include <stdio.h>
 
 /**
- * This is a program that prints the lowercase alphabet in reverse,
- * followed by a new line.
+ * main -main function
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 
 int main(void)
 {
-	int i;
+	char i;
 
-	for (i = 9; i >= 0 ; i--)
-		printf("%d", i);
-	printf("\n");
+	for (i = 'z'; i >= 'a' ; i--)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }

@@ -3,10 +3,9 @@
 
 
 /**
- * This is a program that prints the alphabet in lowercase,
- * followed by a new line
+ * main -main function
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 
 int main(void)

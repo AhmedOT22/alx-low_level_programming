@@ -3,8 +3,7 @@
 
 
 /**
- * This is a program that prints the alphabet in lowercase,
- * then uppercase, followed by a new line
+ * main -main function
  *
  * Return: Always 0 (Success)
  */

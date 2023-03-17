@@ -3,8 +3,7 @@
 
 
 /**
- * This is a program that prints numbers from 0 to 9
- * with putchar()
+ * main -main function
  *
  * Return: Always 0 (Success)
  */
