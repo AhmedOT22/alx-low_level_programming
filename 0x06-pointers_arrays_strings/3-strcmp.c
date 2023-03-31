@@ -6,15 +6,26 @@
  * @s1: first string
  * @s2: second string
  *
- * Return: 0
+ * Return: the difference between s1 and s2
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0;
+	int s;
 
-	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
-		return (s1[i] - s2[i]);
-
-	return (0);
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+		{
+			s = s1[i] - s2[i];
+			break;
+		}
+		else
+		{
+			s = s1[i] - s2[i];
+		}
+		i++;
+	}
+	return (s);
 }
