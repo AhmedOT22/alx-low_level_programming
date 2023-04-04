@@ -5,7 +5,7 @@
  *
  * @s: pointer to string
  * @accept: prefix substring to search
- * 
+ *
  * Return: The number of bytes
  */
 

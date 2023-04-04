@@ -6,7 +6,7 @@
  * @s: pointer to string
  * @accept: pointer to searched string
  *
- * Return : pointer to the wanted bytes if found, or 0 otherwise
+ * Return: pointer to the wanted bytes if found, or 0 otherwise
  */
 
 char *_strpbrk(char *s, char *accept)
@@ -23,4 +23,4 @@ char *_strpbrk(char *s, char *accept)
 		s++;
 	}
 	return ('\0');
-}	
+}
