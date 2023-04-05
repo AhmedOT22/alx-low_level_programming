@@ -6,8 +6,6 @@
  *
  * @a: input pointer
  * @size: matrix size
- *
- * Return: void
  */
 
 void print_diagsums(int *a, int size)
