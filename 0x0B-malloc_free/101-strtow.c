@@ -42,34 +42,41 @@ int word_count(char *str)
 
 char **strtow(char *str)
 {
-	int i, j, k, length, words;
-	char **array;
+	int i, j, c, length, words, start, end;
+	char **array, *tmp;
 
+	j = 0;
+	c = 0;
+	length = 0;
 	words = word_count(str);
 	array = (char **) malloc((words + 1) * sizeof(char *));
 
 	if (array == NULL)
 		return (NULL);
 
-	for (i = 0, j = 0; i < words; i++)
+	for (i = 0; i < length; i++)
 	{
-		while (str[j] == ' ')
-			j++;
-		length = 0;
-		while (str[length + j] != ' ' && str[length + j] != '\0')
-			length++;
-		array[i] = malloc((length + 1) * sizeof(char));
-		if (array[i] == NULL)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			for (k = 0; k < i; k++)
-				free(array[k]);
-			free(array);
-			return (NULL);
+			if (c)
+			{
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				array[j] = tmp - c;
+				j++;
+				c = 0;
+			}
 		}
-		for (k = 0; k < length; k++)
-			array[i][k] = str[j++];
-		array[i][k] = '\0';
+		else if (c++ == 0)
+			start = i;
 	}
-	array[i] = NULL;
+
+	array[j] = NULL;
+
 	return (array);
 }
