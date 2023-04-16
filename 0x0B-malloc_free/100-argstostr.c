@@ -16,10 +16,10 @@ char *argstostr(int ac, char **av)
 	char *str, *s;
 	int i, j, length;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (i = 0, length = 0; i < ac; i++)
 	{
 		for (j = 0; *(*(av + i) + j) != '\0'; j++, length++)
 			;
