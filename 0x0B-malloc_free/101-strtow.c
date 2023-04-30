@@ -48,6 +48,7 @@ char **strtow(char *str)
 	j = 0;
 	c = 0;
 	length = 0;
+	start = 0;
 	words = word_count(str);
 	array = (char **) malloc((words + 1) * sizeof(char *));
 
