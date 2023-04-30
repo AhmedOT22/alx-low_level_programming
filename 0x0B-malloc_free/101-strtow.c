@@ -49,15 +49,18 @@ char **strtow(char *str)
 	c = 0;
 	length = 0;
 	start = 0;
-	words = word_count(str);
-	array = (char **) malloc((words + 1) * sizeof(char *));
 
 	while (*(str + length))
 		length++;
+
+	words = word_count(str);
 	if (words == 0)
 		return (NULL);
+
+	array = (char **) malloc((words + 1) * sizeof(char *));
 	if (array == NULL)
 		return (NULL);
+
 	for (i = 0; i < length; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
