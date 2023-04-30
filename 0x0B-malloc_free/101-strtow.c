@@ -42,18 +42,13 @@ int word_count(char *str)
 
 char **strtow(char *str)
 {
-	int i, j, c, length, words, start, end;
+	int i, j = 0, c = 0, length = 0, words, start, end;
 	char **array, *tmp;
-
-	j = 0;
-	c = 0;
-	length = 0;
-	start = 0;
 
 	while (*(str + length))
 		length++;
 
-	words = word_count(str);
+	words = word_count(str) + 1;
 	if (words == 0)
 		return (NULL);
 
@@ -83,6 +78,5 @@ char **strtow(char *str)
 			start = i;
 	}
 	array[j] = NULL;
-
 	return (array);
 }
